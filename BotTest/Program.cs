@@ -33,7 +33,7 @@ namespace BotTest
             }
             catch (Exception)
             {
-                Console.WriteLine("fuck you.");
+                Console.WriteLine("frick.");
             }
                 
             client.OnMessage += OnMessage;
@@ -305,7 +305,7 @@ namespace BotTest
                         suit = CardSuit.Spade;
                         break;
                     default:
-                        await client.SendTextMessageAsync(game.ChatId, "fuck you, the suit not work");
+                        await client.SendTextMessageAsync(game.ChatId, "no, the suit not work");
                         return;
                 }
                 switch (chosenInlineResultEventArgs.ChosenInlineResult.ResultId[1])
@@ -338,7 +338,7 @@ namespace BotTest
                         value = CardValue.Ace;
                         break;
                     default:
-                        await client.SendTextMessageAsync(game.ChatId, "fuck you, the value not work");
+                        await client.SendTextMessageAsync(game.ChatId, "no, the value not work");
                         return;
                 }
                 card = await player.PlayCardAsync(suit, value);
